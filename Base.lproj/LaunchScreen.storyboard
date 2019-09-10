@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SplashBG" translatesAutoresizingMaskIntoConstraints="NO" id="JH9-2H-0EE">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mxo-aF-Gps">
+                                <rect key="frame" x="40" y="304" width="305" height="59"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Bdg-hH-NAV">
+                                        <rect key="frame" x="0.0" y="0.0" width="61" height="59"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appname" translatesAutoresizingMaskIntoConstraints="NO" id="d3Q-tN-MDN">
+                                        <rect key="frame" x="61" y="12.5" width="244" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="d3Q-tN-MDN" secondAttribute="height" multiplier="36:5" id="Kce-gU-7Ph"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Bdg-hH-NAV" firstAttribute="leading" secondItem="Mxo-aF-Gps" secondAttribute="leading" id="9z3-rr-HgC"/>
+                                    <constraint firstItem="d3Q-tN-MDN" firstAttribute="width" secondItem="Bdg-hH-NAV" secondAttribute="width" multiplier="4:1" id="HSi-en-NhO"/>
+                                    <constraint firstAttribute="bottom" secondItem="Bdg-hH-NAV" secondAttribute="bottom" id="Hb8-bU-elN"/>
+                                    <constraint firstItem="d3Q-tN-MDN" firstAttribute="leading" secondItem="Bdg-hH-NAV" secondAttribute="trailing" id="g8Q-V4-wKT"/>
+                                    <constraint firstAttribute="width" secondItem="Mxo-aF-Gps" secondAttribute="height" multiplier="315:61" id="kw6-f9-p2X"/>
+                                    <constraint firstItem="Bdg-hH-NAV" firstAttribute="top" secondItem="Mxo-aF-Gps" secondAttribute="top" id="s2R-0x-qgx"/>
+                                    <constraint firstItem="d3Q-tN-MDN" firstAttribute="centerY" secondItem="Bdg-hH-NAV" secondAttribute="centerY" id="te8-iu-dQa"/>
+                                    <constraint firstAttribute="trailing" secondItem="d3Q-tN-MDN" secondAttribute="trailing" id="tyL-WR-TEL"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Mxo-aF-Gps" secondAttribute="trailing" constant="30" id="21u-IV-6B6"/>
+                            <constraint firstItem="Mxo-aF-Gps" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="3uG-sh-tMO"/>
+                            <constraint firstItem="Mxo-aF-Gps" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="XzN-kC-sGz"/>
+                            <constraint firstItem="Mxo-aF-Gps" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="fop-lo-xlY"/>
+                            <constraint firstItem="JH9-2H-0EE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kML-CN-THH"/>
+                            <constraint firstItem="JH9-2H-0EE" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="nrI-o8-BKE"/>
+                            <constraint firstAttribute="trailing" secondItem="JH9-2H-0EE" secondAttribute="trailing" id="pla-ek-EgF"/>
+                            <constraint firstAttribute="bottom" secondItem="JH9-2H-0EE" secondAttribute="bottom" id="wFo-jh-5In"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="SplashBG" width="375" height="667"/>
+        <image name="appname" width="210" height="35"/>
+        <image name="logo" width="61" height="61"/>
+    </resources>
+</document>

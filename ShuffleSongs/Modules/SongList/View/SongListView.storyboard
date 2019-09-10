@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pUH-ld-g84">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ShuffleSongs-->
+        <scene sceneID="2gQ-U1-drQ">
+            <objects>
+                <viewController storyboardIdentifier="SongListView" title="Shuffle Songs" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pUH-ld-g84" userLabel="ShuffleSongs" customClass="SongListViewController" customModule="ShuffleSongs" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CjK-fS-GOH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pdB-ri-Qs2">
+                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" red="0.28235294117647058" green="0.23529411764705882" blue="0.28235294117647058" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="pUH-ld-g84" id="NQX-0Z-PHl"/>
+                                    <outlet property="delegate" destination="pUH-ld-g84" id="Twi-pN-bOK"/>
+                                </connections>
+                            </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ED8-9I-zKP">
+                                <rect key="frame" x="188.66666666666666" y="349.66666666666669" width="37" height="37"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.21568627450980393" green="0.14901960784313725" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="pdB-ri-Qs2" firstAttribute="leading" secondItem="PLZ-Br-n50" secondAttribute="leading" id="2ll-Le-IWJ"/>
+                            <constraint firstItem="PLZ-Br-n50" firstAttribute="trailing" secondItem="pdB-ri-Qs2" secondAttribute="trailing" id="YAL-KM-dcq"/>
+                            <constraint firstItem="ED8-9I-zKP" firstAttribute="centerX" secondItem="CjK-fS-GOH" secondAttribute="centerX" id="dWd-8P-xZq"/>
+                            <constraint firstItem="pdB-ri-Qs2" firstAttribute="top" secondItem="PLZ-Br-n50" secondAttribute="top" id="qXu-qv-zei"/>
+                            <constraint firstItem="PLZ-Br-n50" firstAttribute="bottom" secondItem="pdB-ri-Qs2" secondAttribute="bottom" id="rXI-lx-QZR"/>
+                            <constraint firstItem="ED8-9I-zKP" firstAttribute="centerY" secondItem="CjK-fS-GOH" secondAttribute="centerY" id="v5N-V1-Ize"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PLZ-Br-n50"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Shuffle Songs" largeTitleDisplayMode="never" id="oZj-q0-fCA"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="ED8-9I-zKP" id="kQc-1W-ihz"/>
+                        <outlet property="tableView" destination="pdB-ri-Qs2" id="q9W-EI-uKO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="40U-Li-Cvf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1865.217391304348" y="5.7065217391304355"/>
+        </scene>
+    </scenes>
+</document>
