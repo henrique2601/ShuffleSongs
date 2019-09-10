@@ -20,8 +20,7 @@ struct SongsWrapper: Codable {
             
             if let route = try? container.decode(SongEntity.self) {
                 songs.append(route)
-            }
-            else {
+            } else {
                 _ = try? container.decode(DummyCodable.self) // <-- TRICK
             }
         }

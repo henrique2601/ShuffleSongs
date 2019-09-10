@@ -25,7 +25,7 @@ class ImageDataManager {
         
         guard let url = URL(string: urlString) else { return }
         
-        let dataTask = URLSession.shared.dataTask(with: url) { [weak self] (data, response, error) in
+        let dataTask = URLSession.shared.dataTask(with: url) { [weak self] (data, _, error) in
             if let error = error {
                 print("Couldn't download image: ", error)
                 return

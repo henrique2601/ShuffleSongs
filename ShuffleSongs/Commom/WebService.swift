@@ -24,7 +24,7 @@ class WebService: WebServiceProtocol {
                 complete(.failure(.invalidUrl))
                 return
         }
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
+        URLSession.shared.dataTask(with: url) { (data, _, error) in
             if let safeError = error {
                 complete(.failure(.networkError(safeError)))
                 return

@@ -33,12 +33,13 @@ class SongListViewController: UIViewController {
     }
     
     private func setupNavigationBar() {
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navigationController?.navigationBar.shadowImage = UIImage()
-        navigationController?.navigationBar.isTranslucent = false
-        navigationController?.navigationBar.barStyle = .black
-        navigationController?.navigationBar.barTintColor = UIColor(red: 70/255, green: 46/255, blue: 62/255, alpha: 0.72)
-        navigationController?.navigationBar.tintColor = .white
+        let navigationBar = navigationController?.navigationBar
+        navigationBar?.setBackgroundImage(UIImage(), for: .default)
+        navigationBar?.shadowImage = UIImage()
+        navigationBar?.isTranslucent = false
+        navigationBar?.barStyle = .black
+        navigationBar?.barTintColor = UIColor(red: 70/255, green: 46/255, blue: 62/255, alpha: 0.72)
+        navigationBar?.tintColor = .white
     }
     
     private func setupTableView() {
@@ -47,7 +48,9 @@ class SongListViewController: UIViewController {
     }
     
     private func addShuffleButtonOnNavigationBar() {
-        let buttom = UIBarButtonItem(image: UIImage(named: "shuffle"), style: .done, target: self, action: #selector(self.shuffleButtonPressed(sender:)))
+        let buttom = UIBarButtonItem(image: UIImage(named: "shuffle"),
+                                     style: .done, target: self,
+                                     action: #selector(self.shuffleButtonPressed(sender:)))
         navigationItem.rightBarButtonItem = buttom
     }
     
