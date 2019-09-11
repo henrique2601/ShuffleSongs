@@ -21,6 +21,7 @@
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ihH-bd-OPV">
                         <rect key="frame" x="101" y="26" width="354" height="20.5"/>
+                        <accessibility key="accessibilityConfiguration" identifier="Title"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20.5" id="RZk-v0-aI2"/>
                         </constraints>
@@ -30,6 +31,7 @@
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2xo-e0-84Q">
                         <rect key="frame" x="101" y="49.5" width="354" height="18"/>
+                        <accessibility key="accessibilityConfiguration" identifier="Subtitle"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="18" id="03Y-lL-met"/>
                         </constraints>
@@ -40,6 +42,7 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="albumPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="opZ-t3-cOw">
                         <rect key="frame" x="21" y="20" width="60" height="60"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <accessibility key="accessibilityConfiguration" identifier="Album Image"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="60" id="33T-TZ-fbU"/>
                             <constraint firstAttribute="width" constant="60" id="6VM-zf-Kks"/>

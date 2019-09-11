@@ -24,7 +24,7 @@ class SongListViewController: UIViewController {
         setupTableView()
         setupNavigationBar()
         addShuffleButtonOnNavigationBar()
-        
+        self.title = NSLocalizedString("Shuffle Songs", comment: "Screen Title")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -40,6 +40,7 @@ class SongListViewController: UIViewController {
         navigationBar?.barStyle = .black
         navigationBar?.barTintColor = UIColor(red: 70/255, green: 46/255, blue: 62/255, alpha: 0.72)
         navigationBar?.tintColor = .white
+        navigationBar?.accessibilityIdentifier = "Song List Navigation Bar"
     }
     
     private func setupTableView() {
@@ -61,7 +62,8 @@ class SongListViewController: UIViewController {
 
 extension SongListViewController: SongListViewProtocol {
     func showAlert(message: String) {
-        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        let title = NSLocalizedString("Error", comment: "Error Message")
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         self.present(alert, animated: true)
     }

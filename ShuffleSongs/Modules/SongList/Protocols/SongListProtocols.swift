@@ -34,7 +34,7 @@ protocol SongListInteractorOutputProtocol: class {
     
     // Add here your methods for communication INTERACTOR -> PRESENTER
     func songsDidFetch(songs: [SongEntity])
-    func songListFailToFetch(errorMessage: String)
+    func songsFailToFetch(errorMessage: String)
     func songsShuffled(songs: [SongEntity])
 }
 

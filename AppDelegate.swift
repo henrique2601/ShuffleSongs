@@ -14,6 +14,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        if ProcessInfo.processInfo.arguments.contains("UITesting") {
+            setupMocks()
+        }
         initCache()
         initMainScreen()
         return true
@@ -31,5 +34,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func initCache() {
         let urlCache = URLCache(memoryCapacity: 4 * 1024 * 1024, diskCapacity: 20 * 1024 * 1024, diskPath: nil)
         URLCache.shared = urlCache
+    }
+    
+    private func setupMocks() {
+        SongDataAccessFactory.shared = MockSongDataAccessUITest()
     }
 }

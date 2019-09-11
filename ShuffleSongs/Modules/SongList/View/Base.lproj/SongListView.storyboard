@@ -42,7 +42,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PLZ-Br-n50"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Shuffle Songs" largeTitleDisplayMode="never" id="oZj-q0-fCA"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="oZj-q0-fCA"/>
                     <connections>
                         <outlet property="activityIndicator" destination="ED8-9I-zKP" id="kQc-1W-ihz"/>
                         <outlet property="tableView" destination="pdB-ri-Qs2" id="q9W-EI-uKO"/>

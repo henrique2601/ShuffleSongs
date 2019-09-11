@@ -21,11 +21,16 @@ class SongTableViewCell: UITableViewCell {
         albumImage.layer.cornerRadius = imageCornerRadius
         titleLabel.text = songViewModel.title
         subtitleLabel.text = songViewModel.subTitle
+        setupAccessibility()
         downloadImage(urlString: songViewModel.imageURL)
     }
     
     override func prepareForReuse() {
         albumImage.image = UIImage(named: "albumPlaceholder")
+    }
+    
+    private func setupAccessibility() {
+        self.accessibilityIdentifier = "Song Cell \(indexPath.row)"
     }
     
     private func downloadImage(urlString: String) {

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct SongViewModel {
+struct SongViewModel: Equatable {
     var imageURL: String
     var title: String
     var subTitle: String
@@ -17,5 +17,11 @@ struct SongViewModel {
         imageURL = entity.artworkUrl
         title = entity.trackName
         subTitle = "\(entity.artistName) (\(entity.primaryGenreName))"
+    }
+    
+    init() {
+        imageURL = ""
+        title = ""
+        subTitle = ""
     }
 }

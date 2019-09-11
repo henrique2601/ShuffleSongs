@@ -10,7 +10,7 @@ import UIKit
 
 class SongListInteractor: SongListInteractorProtocol {
     var output: SongListInteractorOutputProtocol?
-    private var songs: [SongEntity] = []
+    var songs: [SongEntity] = []
     
     func fetchSongs() {
         songs = []
@@ -24,7 +24,7 @@ class SongListInteractor: SongListInteractorProtocol {
                 self?.output?.songsDidFetch(songs: songs)
                 break
             case .failure(let error):
-                self?.output?.songListFailToFetch(errorMessage: error.localizedDescription)
+                self?.output?.songsFailToFetch(errorMessage: error.localizedDescription)
                 break
             }
         }
@@ -51,43 +51,5 @@ class SongListInteractor: SongListInteractorProtocol {
         }
         
         songs = shuffledSongs
-    }
-    
-    private func generateSongs() {
-//        let song = SongEntity(primaryGenreName: "Axé",
-//                              artworkUrl: "artworkUrl",
-//                              artistName: "Bloco TótiOQue",
-//                              trackName: "Praia dos Rumores")
-//        songs.append(song)
-//
-//        let song1 = SongEntity(primaryGenreName: "Hip-Hop",
-//                              artworkUrl: "artworkUrl",
-//                              artistName: "Decimais MC's",
-//                              trackName: "Rua da Perfeição")
-//        songs.append(song1)
-//
-//        let song2 = SongEntity(primaryGenreName: "Pop",
-//                              artworkUrl: "artworkUrl",
-//                              artistName: "MC Arianne",
-//                              trackName: "Boom Boom")
-//        songs.append(song2)
-//
-//        let song3 = SongEntity(primaryGenreName: "Rock",
-//                              artworkUrl: "artworkUrl",
-//                              artistName: "John Dollar",
-//                              trackName: "Warmth of the Road")
-//        songs.append(song3)
-//
-//        let song4 = SongEntity(primaryGenreName: "Metal",
-//                              artworkUrl: "artworkUrl",
-//                              artistName: "Charlie and the Chewie Humans",
-//                              trackName: "Bomb Secrets")
-//        songs.append(song4)
-//
-//        let song5 = SongEntity(primaryGenreName: "Axé",
-//                               artworkUrl: "artworkUrl",
-//                               artistName: "Bloco TótiOQue",
-//                               trackName: "Memórias dos meus Desejos")
-//        songs.append(song5)
     }
 }

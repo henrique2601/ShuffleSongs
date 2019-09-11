@@ -28,8 +28,8 @@ extension SongListPresenter: SongListInteractorOutputProtocol {
         updateViewWith(songs: songs)
     }
     
-    func songListFailToFetch(errorMessage: String) {
-        view?.stopLoadingAnimation()
+    func songsFailToFetch(errorMessage: String) {
+        updateViewWith(songs: [])
         view?.showAlert(message: errorMessage)
     }
     

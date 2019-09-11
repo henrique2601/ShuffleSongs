@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  ShuffleSongs
+
+  Created by Paulo Henrique dos Santos on 10/09/19.
+  Copyright © 2019 Paulo Henrique dos Santos. All rights reserved.
+*/
+
+"Shuffle Songs" = "Embaralhar Músicas";
+"An error was found while getting the data." = "Foi encontrado um erro ao obter os dados.";
+"The server has returned no data." = "O servidor não retornou dados.";
+"Fail to connect to server." = "Falha na conexão com o servidor.";
+"Error" = "Erro";
