@@ -45,6 +45,7 @@
 		3A2795A7232892D00064EB29 /* SongInvalidData.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A2795A6232892D00064EB29 /* SongInvalidData.json */; };
 		3A2795AB232894CE0064EB29 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3A2795AD232894CE0064EB29 /* Localizable.strings */; };
 		3A2795B0232898570064EB29 /* SongListView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A2795B2232898570064EB29 /* SongListView.storyboard */; };
+		3A2795BF23289ACB0064EB29 /* MockWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2795BE23289ACB0064EB29 /* MockWebService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +114,7 @@
 		3A2795B1232898570064EB29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SongListView.storyboard; sourceTree = "<group>"; };
 		3A2795BA232899F90064EB29 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SongListView.strings; sourceTree = "<group>"; };
 		3A2795BC232899FD0064EB29 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/SongListView.strings"; sourceTree = "<group>"; };
+		3A2795BE23289ACB0064EB29 /* MockWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWebService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -398,6 +400,7 @@
 		3A27959523287DFD0064EB29 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				3A2795BD23289AB50064EB29 /* WebService */,
 				3A27959F232887580064EB29 /* SongDataAccess */,
 			);
 			path = Services;
@@ -428,6 +431,14 @@
 				3A2795AD232894CE0064EB29 /* Localizable.strings */,
 			);
 			path = i18n;
+			sourceTree = "<group>";
+		};
+		3A2795BD23289AB50064EB29 /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+				3A2795BE23289ACB0064EB29 /* MockWebService.swift */,
+			);
+			path = WebService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -594,6 +605,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A2795BF23289ACB0064EB29 /* MockWebService.swift in Sources */,
 				3A27959C232886EE0064EB29 /* MockSongListInteractor.swift in Sources */,
 				3A27959E232887190064EB29 /* MockSongListView.swift in Sources */,
 				3A27959723287EA30064EB29 /* MockSongListInteractorOutput.swift in Sources */,

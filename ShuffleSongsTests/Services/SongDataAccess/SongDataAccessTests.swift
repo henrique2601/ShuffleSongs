@@ -83,30 +83,3 @@ class SongDataAccessTests: XCTestCase {
     }
 
 }
-
-class MockWebService: WebServiceProtocol {
-    var jsonName = "Songs"
-    var getDataCalledWith = ""
-    var shouldReturnError = false
-    var errorToReturn: WebServiceError = .invalidUrl
-    
-    func getData(urlString: String, completion complete: @escaping (Result<Data, WebServiceError>) -> Void) {
-        if shouldReturnError {
-            complete(.failure(errorToReturn))
-            return
-        }
-        
-        getDataCalledWith = urlString
-        
-        let bundle = Bundle(for: type(of: self))
-        
-        guard let url = bundle.url(forResource: jsonName, withExtension: "json") else {
-            XCTFail("Missing file: \(jsonName).json")
-            return
-        }
-        
-        let json = try! Data(contentsOf: url)
-        
-        complete(.success(json))
-    }
-}
